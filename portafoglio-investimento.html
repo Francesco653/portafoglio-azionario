@@ -716,7 +716,7 @@ Rispondi in italiano. Usa tabelle markdown pulite. Massima precisione sui ticker
   try {
     const resp = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "x-api-key": "sk-ant-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", "anthropic-version": "2023-06-01" },
       body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 3000, messages: [{ role: "user", content: prompt }] })
     });
     const data = await resp.json();
